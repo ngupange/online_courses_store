@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :courses
   resources :instructors
   root 'trial#try'
   devise_for :users
