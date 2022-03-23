@@ -1,0 +1,20 @@
+<h1>Trial#try</h1>
+<p>Find me in app/views/trial/try.html.erb</p>
+
+<% if current_user %>
+    
+    <p>Hello <%= current_user.email %>!!</p>
+    <p>Displaying a role</p>
+    <p>You are a [<%= current_user.role %>]</p>
+    <%if current_user.admin?%> 
+        <p>We have <%= User.count %> Users in the database.</p>
+    <%end%>
+    <br>
+    <p>You have Successfully authenticated with your devise account! Welcome</p>
+    <p>I will post list of all available courses here without buy button activated (You can't buy your courses)</p>
+<% else %>
+
+    <p>I will post list of all available courses here with buy button activated</p>
+    <p>Find me in app/views/courses/index.html.erb</p>
+
+<% end%>
